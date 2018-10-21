@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">sqlgalih</string>
+    <string-array name="mood">
+        <item>Marah 💢</item>
+        <item>Bahagia ☺</item>
+        <item>Sedih 😞</item>
+        <item>Malu 😳</item>
+    </string-array>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/blank_top">
+
+    </View>
+
+    <ImageView
+        android:layout_width="339dp"
+        android:layout_height="139dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:src="@drawable/download" />
+
+    <View
+        android:id="@+id/blank_mid"
+        android:layout_width="match_parent"
+        android:layout_height="99dp">
+
+    </View>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="109dp"
+        android:layout_centerVertical="true"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txt_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimary"
+            android:hint="Username or email" />
+
+        <EditText
+            android:id="@+id/txt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/colorPrimary"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="-26dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="button_onClick"
+        android:text="Login"
+        android:textColor="@color/colorPrimary" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/btn_login"
+        android:id="@+id/blank_bottom">
+
+    </View>
+
+    <CheckBox
+        android:id="@+id/chk_remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blank_bottom"
+        android:layout_centerHorizontal="true"
+        android:text="Remember Me!" />
+
+</RelativeLayout>
