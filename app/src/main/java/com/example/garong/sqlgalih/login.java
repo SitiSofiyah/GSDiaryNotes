@@ -1,10 +1,11 @@
 package com.example.garong.sqlgalih;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -31,11 +32,11 @@ public class login extends AppCompatActivity {
         this.btnlogin = this.findViewById(R.id.btn_login);
         this.txtUsername = this.findViewById(R.id.txt_username);
         this.txtPassword = this.findViewById(R.id.txt_password);
-        
+
     }
 
     private void checkSavedCredentials() {
-        SharedPreferences handler = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences handler=this.getSharedPreferences("key",Context.MODE_PRIVATE);
 
         String username = handler.getString("username","");
         String password = handler.getString("password","");
@@ -55,7 +56,7 @@ public class login extends AppCompatActivity {
     }
 
     private boolean checkCredentials(String username, String password) {
-        if(username.equals("android")&& password.equals("android"))
+        if(username.equals("a")&& password.equals("a"))
             return  true;
         else
             return false;
@@ -88,7 +89,8 @@ public class login extends AppCompatActivity {
     }
 
     private void saveCredentials() {
-        SharedPreferences handler = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences handler = this.getSharedPreferences("key",Context.MODE_PRIVATE);
+
         SharedPreferences.Editor editor = handler.edit();
 
         editor.putString("username",this.txtUsername.getText().toString());
@@ -97,3 +99,4 @@ public class login extends AppCompatActivity {
         editor.apply();
     }
 }
+

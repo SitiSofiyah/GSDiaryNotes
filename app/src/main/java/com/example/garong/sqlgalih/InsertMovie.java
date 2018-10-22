@@ -2,11 +2,10 @@ package com.example.garong.sqlgalih;
 
 import android.app.DatePickerDialog;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -67,15 +66,26 @@ public class InsertMovie extends AppCompatActivity {
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View arg0) {
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                db.execSQL("INSERT INTO sinetrons(judul,tanggal,isi,mood) values('" + text2.getText().toString() + "','" + text3.getText().toString() + "','"
-                        + text4.getText().toString() + "','" + sp.getSelectedItem().toString() + "')");
-                Toast.makeText(getApplicationContext(),"berhasil ditambahkan",Toast.LENGTH_LONG).show();
+            public void onClick(View v) {
 
-                MainActivity.layarutama.TampilkanList();
+                String judul=text2.getText().toString();
+                String isi=text3.getText().toString();
+                String tanggal=text4.getText().toString();
+                String mood=sp.getSelectedItem().toString();
 
-                finish();
+
+                if(judul.equals("") || isi.equals("") || tanggal.equals("") ||mood.equals("")){
+                    Toast.makeText(InsertMovie.this,"Please fill all the fields",Toast.LENGTH_LONG).show();
+                }else {
+                    dbHelper = new MyDataHelper(InsertMovie.this);
+                    dbHelper.insertIntoDB(judul, isi, tanggal, mood);
+                }
+                text2.setText("");
+                text3.setText("");
+                text4.setText("");
+
+                Toast.makeText(InsertMovie.this, "insert value", Toast.LENGTH_LONG);
+
             }
         });
         btn2.setOnClickListener(new View.OnClickListener(){
@@ -88,3 +98,4 @@ public class InsertMovie extends AppCompatActivity {
 
     }
 }
+

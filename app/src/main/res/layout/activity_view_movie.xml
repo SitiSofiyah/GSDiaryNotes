@@ -7,70 +7,57 @@
     tools:context=".ViewMovie">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="246dp"
-        android:layout_height="54dp"
+        android:id="@+id/textView2"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="204dp"
-        android:gravity="left"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="65dp"
         android:text="TextView"
         android:textAlignment="center"
-        android:textColor="#000000'"
+        android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:ignore="UnknownId"
-        android:layout_alignParentLeft="true" />
+        tools:ignore="UnknownId" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="273dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignParentRight="true"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_below="@id/textView2"
-        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="122dp"
         android:gravity="center"
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="122dp"
-        android:layout_marginTop="165dp"
+        android:id="@+id/textView4"
+        android:layout_width="278dp"
+        android:layout_height="182dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="178dp"
+        android:gravity="left"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView6"
-        android:layout_marginEnd="-122dp"
-        android:layout_toStartOf="@+id/textView6"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="160dp"
         android:text="Perasaan :" />
 
-    <Button
-        android:id="@+id/button1"
+    <TextView
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="44dp"
-        android:layout_marginEnd="60dp"
-        android:text="Kembali" />
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/textView"
+        android:layout_marginStart="149dp"
+        android:text="TextView" />
 
     <ImageView
         android:id="@+id/bg"
@@ -78,5 +65,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="46dp"
+        app:srcCompat="@android:drawable/ic_media_previous"
+        tools:ignore="NotSibling" />
 
 </RelativeLayout>

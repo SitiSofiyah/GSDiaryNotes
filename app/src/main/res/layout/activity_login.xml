@@ -6,12 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".login">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:id="@+id/blank_top">
 
-    </View>
 
     <ImageView
         android:layout_width="339dp"
@@ -21,12 +16,7 @@
         android:layout_marginTop="42dp"
         android:src="@drawable/download" />
 
-    <View
-        android:id="@+id/blank_mid"
-        android:layout_width="match_parent"
-        android:layout_height="99dp">
 
-    </View>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -67,19 +57,13 @@
         android:onClick="button_onClick"
         android:text="Login"
         android:textColor="@color/colorPrimary" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_below="@+id/btn_login"
-        android:id="@+id/blank_bottom">
 
-    </View>
 
     <CheckBox
         android:id="@+id/chk_remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/blank_bottom"
+        android:layout_below="@id/btn_login"
         android:layout_centerHorizontal="true"
         android:text="Remember Me!" />
 
