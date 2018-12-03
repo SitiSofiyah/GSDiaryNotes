@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class InsertMovie extends AppCompatActivity {
+ class InsertMovie extends AppCompatActivity {
     protected Cursor cursor;
     MyDataHelper dbHelper;
     Button btn1, btn2;

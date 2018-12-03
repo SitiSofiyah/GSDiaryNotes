@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_post_put_del_pembeli"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".AddMood"
+    android:background="#E9967A">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/imgMood"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_account_circle" />
+    <View
+        android:id="@+id/abs"
+        android:layout_below="@id/imgMood"
+        android:layout_width="12dp"
+        android:layout_height="25dp"></View>
+        <Button
+            android:id="@+id/btAddMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/abs"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorAccent"
+
+            android:text="Add Mood" />
+
+
+    </RelativeLayout>
+</ScrollView>

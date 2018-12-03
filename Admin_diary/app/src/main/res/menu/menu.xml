@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menuListLokasi"
+        android:title="List Lokasi"/>
+    <item android:id="@+id/menuListMood"
+        android:title="List Mood"/>
+    <item android:id="@+id/logout"
+        android:title="Log Out"/>
+</menu>
